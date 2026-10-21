@@ -1,0 +1,61 @@
+<!-- Create an HTML page containing:
+- a header
+- navigation
+- hero section
+- heading
+- paragraph
+- button
+- three product cards
+- footer
+Then style it however you naturally would. -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Living Spaces homepage</title>
+    </head>
+    <body>
+        <header>
+            <h1>LIVING SPACES</h1>
+        </header>
+        <nav class="navbar">
+            <div class="nav-item" data-tab="tab-new">New</div>
+            <div class="nav-item" data-tab="tab-living-room">Living Room</div>
+            <div class="nav-item" data-tab="tab-bedroom">Bedroom</div>
+            <div class="nav-item" data-tab="tab-dining-room">Dining Room</div>
+            <div class="nav-item" data-tab="tab-home-office">Home Office</div>
+            <div class="nav-item" data-tab="tab-outdoor">Outdoor</div>
+        </nav>
+
+        <div class="tab-container">
+            <div id="tab-new" class="tab-panel">This is the new tab.</div>
+            <div id="tab-living-room" class="tab-panel">This is the living room tab.</div>
+            <div id="tab-bedroom" class="tab-panel">This is the bedroom tab.</div>
+            <div id="tab-dining-room" class="tab-panel">This is the dining room tab.</div>
+            <div id="tab-home-office" class="tab-panel">This is the home office tab.</div>
+            <div id="tab-outdoor" class="tab-panel">This is the outdoor tab.</div>
+        </div> 
+
+        
+        <div class="hero-section">
+            <!-- here there's a large graphic -->
+            <!-- <a href="https://www.livingspaces.com/event/thanksgiving/p588912" target="_blank" rel="noopener">
+                <img src="https://www.livingspaces.com/globalassets/homepage/2026/10/thanksgiving/261910_thanksgiving_hero_v2_d.jpg?width=2520&height=1275&mode=crop">
+            </a>  -->
+            <button type="button" id="heroImgBtn" class="hero-img-btn" aria-label="click me">
+                <img src="https://www.livingspaces.com/globalassets/homepage/2026/10/thanksgiving/261910_thanksgiving_hero_v2_d.jpg?width=2520&height=1275&mode=crop">
+            </button>
+        </div>
+        <div class="grid-cards">
+            <div class="card"><img src="https://www.livingspaces.com/globalassets/homepage/2026/09/rooms/260907_fall_lr.jpeg?width=608&height=760&mode=crop"><p>Living Room</p></div>
+            <div class="card"><img src="https://www.livingspaces.com/globalassets/homepage/2026/09/rooms/260907_fall_br.jpeg?width=608&height=760&mode=crop"><p>Bedroom</p></div>
+            <div class="card"><img src="https://www.livingspaces.com/globalassets/homepage/2026/09/rooms/260907_fall_dr.jpeg?width=608&height=760&mode=crop"><p>Dining Room</p></div>
+            <div class="card"><img src="https://www.livingspaces.com/globalassets/homepage/2026/09/rooms/260907_fall_ho.jpeg?width=608&height=760&mode=crop"><p>Home Office</p></div>
+            <div class="card"><img src="https://www.livingspaces.com/globalassets/homepage/2026/09/rooms/260907_fall_outdoor.jpeg?width=608&height=760&mode=crop"><p>Outdoor</p></div>
+        </div>
+    </body>
+    <script src="day2.js"></script>
+</html>

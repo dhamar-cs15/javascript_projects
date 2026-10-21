@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f9f7f4;
+}
+
+header h1 {
+    display: flex;
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 6px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fffdf3;
+    padding: 1rem 1rem;
+    position: relative;
+    z-index: 10;
+}
+
+.nav-item {
+    margin: 0.5rem;
+    cursor: pointer;
+    position: relative; /* 🌟 Underline works perfectly now */
+    padding-bottom: 5px;
+}
+
+.nav-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: rgb(0, 0, 0);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-item:hover::after {
+    transform: scaleX(1);
+}
+
+.tab-container {
+    position: fixed;
+    padding: 20px;
+    top: 100%;             /* Drops right below the navbar */
+    width: 450px;          /* Clean fixed wide layout */
+    background-color: #fffdf3;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 9;
+    
+    display: none;         /* Hidden by default */
+}
+
+/* 🌟 Shown when any panel inside is active */
+.tab-container:has(.tab-panel.active) {
+    display: block;
+}
+
+.tab-panel {
+    display: none;
+}
+
+.tab-panel.active {
+    display: block;
+}
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+/* .hero-section img {
+    width: 100%;
+    height: auto;
+} */
+
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+    margin: 1.5rem;
+}
+
+.card {
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.card p {
+    margin: 0.5rem 0 0 0;
+    font-weight: lighter;
+    font-size: 0.9rem;
+}
+
+.hero-img-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: none;
+}
+
+.hero-img-btn img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
